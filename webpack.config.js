@@ -32,15 +32,25 @@ module.exports = {
                 }
             },
             {
-                test: /\.css$/,
-                use: [
-                    {
-                        loader: 'style-loader',
-                    },
-                    {
-                        loader: 'css-loader',
-                    }
-                ]
+                test: /\.(scss|css)$/,
+                use: ExtractTextPlugin.extract({
+                    use: [
+                        {
+                            loader: 'css-loader',
+                            options: {
+                                importLoaders: 1,
+                                sourceMap: true
+                            }
+                        },
+                        {
+                            loader: 'sass-loader',
+                            options: {
+                                sourceMap: true
+                            }
+                        }
+                    ],
+                    fallback: 'style-loader'
+                })
             },
             {
                 test: /\.(png|jpg|jpeg|gif|svg|eot|ttf|woff|woff2)$/,
@@ -49,13 +59,7 @@ module.exports = {
                     limit: 10000
                 }
             },
-            {
-                test: /\.css$/,
-                use: ExtractTextPlugin.extract({
-                    use: 'css-loader',
-                    fallback: 'style-loader'
-                })
-            }
+
         ]
     },
     plugins: [

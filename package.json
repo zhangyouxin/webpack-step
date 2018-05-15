@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run test",
-    "start": "PORT=8660 react-scripts start"
+    "build": "webpack -p --env production",
+    "start": "webpack-dev-server --open --port=8660 ",
+    "start-production": "webpack-dev-server --env production --open"
   },
   "devDependencies": {
     "babel-core": "^6.2.1",
@@ -16,14 +18,20 @@
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.9.0",
     "react-scripts": "^1.0.17",
+    "sass-loader": "^7.0.1",
     "style-loader": "^0.21.0",
     "uglifyjs-webpack-plugin": "^1.2.5",
     "url-loader": "^1.0.1"
   },
   "dependencies": {
+    "element-react": "^1.4.19",
+    "element-theme-default": "^1.4.13",
+    "element-ui": "^2.3.8",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "redux-duck": "^1.0.2"
   },
   "repository": {
     "type": "git",

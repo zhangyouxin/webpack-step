@@ -1,0 +1,12 @@
+@import "base";
+body {
+    margin: 0;
+    background-color: white;
+}
+#root {
+    height: 100vh;
+    background-image: linear-gradient(to bottom , #7A88FF, #c4c9d0);
+    background-size: cover;
+    background-position: center;
+    color: $primary-color;
+}
