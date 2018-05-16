@@ -10,7 +10,8 @@ const path = require('path');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const autoprefixer = require('autoprefixer');
 module.exports = {
     entry: './src/index.js',
     output: {
@@ -38,7 +39,7 @@ module.exports = {
                         {
                             loader: 'css-loader',
                             options: {
-                                importLoaders: 1,
+                                importLoaders: 2,
                                 sourceMap: true
                             }
                         },
@@ -47,6 +48,9 @@ module.exports = {
                             options: {
                                 sourceMap: true
                             }
+                        },
+                        {
+                            loader: 'postcss-loader'
                         }
                     ],
                     fallback: 'style-loader'
