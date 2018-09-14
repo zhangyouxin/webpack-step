@@ -6,8 +6,11 @@
   "scripts": {
     "test": "npm run test",
     "build": "webpack -p --env production",
-    "start": "webpack-dev-server --open --port=8660 ",
-    "start-production": "webpack-dev-server --env production --open"
+    "start": "webpack-dev-server --open --port=8660 --public payment.nike.com ",
+    "start-production": "webpack-dev-server --env production --open",
+    "e2e": "node ./teste2e.js",
+    "selenium-setup": "node ./build/selenium-setup.js",
+    "selenium-start": "node ./build/selenium-start.js"
   },
   "devDependencies": {
     "autoprefixer": "^8.5.0",
@@ -15,14 +18,18 @@
     "babel-loader": "^6.2.0",
     "babel-preset-es2015": "^6.1.18",
     "babel-preset-react": "^6.1.18",
+    "chromedriver": "^2.38.3",
     "clean-webpack-plugin": "^0.1.19",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.2.0",
+    "mocha": "^5.2.0",
+    "nightwatch": "^0.9.21",
     "node-sass": "^4.9.0",
     "postcss-loader": "^2.1.5",
     "react-scripts": "^1.0.17",
     "sass-loader": "^7.0.1",
+    "selenium-standalone": "^6.15.0",
     "style-loader": "^0.21.0",
     "uglifyjs-webpack-plugin": "^1.2.5",
     "url-loader": "^1.0.1"
@@ -33,7 +40,8 @@
     "element-ui": "^2.3.8",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "redux-duck": "^1.0.2"
+    "redux-duck": "^1.0.2",
+    "restify": "^7.2.1"
   },
   "repository": {
     "type": "git",

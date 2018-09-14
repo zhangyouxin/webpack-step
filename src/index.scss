@@ -4,14 +4,9 @@ body {
   background-color: white;
 }
 #root {
-  height: 100vh;
-  background-image: linear-gradient(to bottom , #7A88FF, #c4c9d0);
-  background-size: cover;
-  background-position: center;
+
   color: $primary-color;
-  position: fixed;
-  width: 100%;
+  //position: fixed;
+
   display: flex;
-  align-items: center;
-  justify-content: center;
 }

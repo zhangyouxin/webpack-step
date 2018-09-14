@@ -1,0 +1,24 @@
+$header-height: 50px;
+
+.header {
+  height: $header-height;
+  background: grey;
+  position: fixed;
+  display: inline-block;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+
+  .logo {
+    color: #7A88FF;
+    line-height: $header-height;
+    margin-left: 20px;
+    width: 100px;
+    text-align: center;
+  }
+
+  .search {
+
+  }
+}

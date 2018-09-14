@@ -1,0 +1,14 @@
+
+.mood-area {
+  position: absolute;
+  top: 100px;
+  width: calc(100% - 10px);
+
+  padding-left: 20px;
+  display: flex;
+  flex-flow: row wrap;
+
+  background-image: linear-gradient(to bottom , #7A88FF, #c4c9d0);
+  background-size: cover;
+  background-position: center;
+}
